@@ -1,4 +1,4 @@
-const key = require('./key.js');
+require('dotenv').config()
 
 'use strict'
 /**
@@ -15,7 +15,7 @@ exports.config = {
   /**
    * Your New Relic license key.
    */
-  license_key: key.key,
+  license_key: '8beb6293e66676a4272c26773c75799a2d2aNRAL',
   logging: {
     /**
      * Level at which to log. 'trace' is most useful to New Relic when diagnosing
