@@ -12,7 +12,7 @@ app.use('/games/:id', express.static(`${__dirname}/public`));
 
 app.get('/cartapi/:id', (req, res) => {
   axios({
-    baseURL: `http://localhost:3001/cartapi/${req.params.id}`
+    baseURL: `http://ec2-13-59-39-155.us-east-2.compute.amazonaws.com:3001/cartapi/${req.params.id}`
   })
     .then((data) => { res.status(200).send(data.data); })
     .catch(() => { res.status(404).end(); });
