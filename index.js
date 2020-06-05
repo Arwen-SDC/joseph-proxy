@@ -18,6 +18,15 @@ app.get('/cartapi/:gameId', (req, res) => {
     .catch(() => { res.status(404).end(); });
 });
 
+app.get('/carousel/:gameId', (req, res) => {
+  axios({
+    baseURL: `http://52.14.177.16:3003/carousel/${req.params.gameId}`
+  })
+    .then((data) => { res.status(200).send(data.data); })
+    .catch(() => { res.status(404).end(); });
+});
+
+
 app.get('/api/games/:gameId', (req, res) => {
   axios({
     baseURL: `http://54.67.69.54:3004/api/games/${req.params.gameId}`
